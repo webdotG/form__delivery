@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form__delivery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="form-wrapper">
+    <form action="https://......." method="post">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" required> <!-- обязательное заполнение -->
+        <label for="address">Delivery to</label>
+        <textarea id="address" name="address" rows="3" required></textarea> <!-- обязательное заполнение -->
+        <div class="half-width">
+            <label for="date">Date delivery</label>
+            <input id="date" type="date" name="date">          <!-- Выбор даты -->
+        </div>
+        <div class="half-width">
+            <label for="time">Time delivery</label>
+            <input id="time" type="time" name="time">         <!-- Выбор времени -->
+        </div>
+        <div class="half-width">
+            <label for="dish">Food</label>
+            <input type="text" id="dish" name="dish" list="dishes">
+            <datalist id="dishes">                    <!-- Список возможных значений -->
+                <option value="Vegetables"></option>
+                <option value="Fruit"></option>
+                <option value="Meat"></option>
+                <option value="Bird"></option>
+                <option value="Fish"></option>
+                <option value="Bread"></option>
+                <option value="Alcohol"></option>
+                <option value="Non alcohol"></option>
+            </datalist>
+        </div>
+        <div class="half-width">
+            <label for="amount">Number</label>
+            <input id="amount" type="number" min="1" max="10" step="1" name="amount">  <!-- Поле для ввода числового значения -->
+        </div>
+        <div class="buttons">
+            <input type="submit" value="Order">
+        </div>
+    </form>
+</div>
+</body>
+</html>
